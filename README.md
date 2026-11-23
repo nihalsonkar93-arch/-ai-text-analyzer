@@ -1,63 +1,77 @@
 
-# AI Text Analyzer
+AI Text Analyzer
 
-An AI-powered text analysis API built using Python, Hugging Face Transformers, and FastAPI.
+An AI-powered text analysis application built using Python, FastAPI, and Groq API.
 
-## Project Overview
+The application provides sentiment analysis, text summarization, and combined text analysis through REST API endpoints.
 
-This project analyzes text using two pretrained Hugging Face models. It can identify the sentiment of text, summarize it, and return both results through a REST API.
+Features
 
-## Features
+- Sentiment Analysis: Identifies whether text expresses positive or negative sentiment.
+- Text Summarization: Generates concise summaries of longer text.
+- Combined Analysis: Performs sentiment analysis and summarization together.
+- REST API: Provides interactive API documentation through FastAPI.
 
-- Sentiment analysis: identifies positive or negative sentiment.
-- Text summarization: generates a shorter version of the input.
-- Combined analysis: returns sentiment and summary together.
-- Input validation: rejects empty or whitespace-only text.
-- JSON responses through FastAPI.
-
-## Technologies Used
+Technologies Used
 
 - Python
-- Hugging Face Transformers
-- DistilBERT
-- DistilBART
 - FastAPI
+- Groq API
+- Large Language Models (LLMs)
 - Pydantic
-- PyTorch
+- Uvicorn
+- GitHub
+- Render
 
-## API Endpoints
+API Endpoints
 
-| Method | Endpoint | Purpose |
-|---|---|---|
-| POST | `/analyze` | Sentiment analysis |
-| POST | `/summarize` | Text summarization |
-| POST | `/analyze-all` | Both operations |
+Method| Endpoint| Purpose
+POST| "/analyze"| Analyze text sentiment
+POST| "/summarize"| Generate a text summary
+POST| "/analyze-all"| Perform both operations
 
-## Installation
+Installation and Local Setup
 
-Install the required libraries:
+1. Clone the repository:
+   
+   git clone https://github.com/nihalsonkar93-arch/ml-prediction-api.git
 
-```bash
-pip install -r requirements.txt
-```
+2. Enter the project directory:
+   
+   cd ai-text-analyzer
 
-## Run the API
+3. Install dependencies:
+   
+   pip install -r requirements.txt
 
-```bash
-uvicorn app:app --reload
-```
+4. Set your Groq API key as an environment variable:
+   
+   GROQ_API_KEY=your_api_key
 
-Open the interactive API documentation:
+5. Start the application:
+   
+   uvicorn app:app --reload
 
-`http://127.0.0.1:8000/docs`
+6. Open the interactive API documentation:
+   
+   http://127.0.0.1:8000/docs
 
-## How It Works
+Deployment
 
-1. The user submits text to the API.
-2. FastAPI validates the input.
-3. Hugging Face models analyze or summarize the text.
-4. The API returns the results in JSON format.
+The application is deployed using Render.
 
-## Note
+Add "GROQ_API_KEY" as an environment variable in the Render dashboard. Never commit API keys or other secrets to GitHub.
 
-This project uses pretrained models for educational and demonstration purposes.
+What I Learned
+
+- Building REST APIs using FastAPI.
+- Integrating external LLM APIs.
+- Designing prompts for AI-powered tasks.
+- Handling structured JSON responses.
+- Validating input using Pydantic.
+- Testing API endpoints.
+- Deploying an AI application to the cloud.
+
+Project Status
+
+Successfully deployed and tested with all three API endpoints.
