@@ -75,3 +75,6 @@ What I Learned
 Project Status
 
 Successfully deployed and tested with all three API endpoints.
+## API Documentation
+
+![API Documentation](screenshots/api-documentation.png)
