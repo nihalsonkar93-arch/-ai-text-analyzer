@@ -77,4 +77,4 @@ Project Status
 Successfully deployed and tested with all three API endpoints.
 ## API Documentation
 
-![API Documentation](screenshots/Screenshot_20261123-232019_Chrome.jpg)
+![API Documentation](Screenshot_20261123-232019_Chrome.jpg)
